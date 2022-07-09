@@ -1,7 +1,8 @@
+# Test
 common_steps_template: &COMMON_STEPS_TEMPLATE
   clone_dmd_script: |
     set -uexo pipefail
-    git clone --branch "${CIRRUS_BASE_BRANCH:-$CIRRUS_BRANCH}" --depth 1 https://github.com/dlang/dmd.git ../dmd
+    git clone --branch "${CIRRUS_BASE_BRANCH:-$CIRRUS_BRANCH}" --depth 1 https://github.com/ibuclaw/dmd-monorepo.git ../dmd
   install_prerequisites_script: cd ../dmd && ./ci/cirrusci.sh
   install_host_compiler_script: cd ../dmd && ./ci/run.sh install_host_compiler
   setup_repos_script: |
